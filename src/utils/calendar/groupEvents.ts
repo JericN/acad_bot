@@ -1,4 +1,4 @@
-import { AcadEvent, GroupedEvents } from '../types/types';
+import { AcadEvent, GroupedEvents } from '../schema';
 import { formatDate } from '../commands/formatDate';
 
 function groupBySubject(events: AcadEvent[]): GroupedEvents {

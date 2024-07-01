@@ -1,5 +1,5 @@
 import { calendar_v3, google } from 'googleapis';
-import { AcadEvent } from '../utils/types/types';
+import { AcadEvent } from '../utils/schema';
 import path from 'path';
 
 // FIXME: secure the keyFile

@@ -1,5 +1,5 @@
 import { toBlue, toRed, wrap } from '../discordColor';
-import { GroupedEvents } from '../types/types';
+import { GroupedEvents } from '../schema';
 import { listAcadEvents } from '../textFormat';
 
 export function generateValidEventScript(validGroups: GroupedEvents): string {

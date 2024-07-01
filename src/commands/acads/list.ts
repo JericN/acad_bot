@@ -1,5 +1,5 @@
 import { ApplicationCommandOptionType, type Client, type CommandInteraction } from 'discord.js';
-import { CommandOption, ListOptions } from '../../utils/types/types';
+import { CommandOption, ListOptions } from '../../utils/schema';
 import { calculateSearchInterval, extractUserOptions } from '../../utils/commands';
 import { filterEvents, groupEvents } from '../../utils/calendar';
 import {

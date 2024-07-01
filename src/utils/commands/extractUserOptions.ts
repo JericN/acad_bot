@@ -1,6 +1,6 @@
 import { assert, assertDefined } from '../assert';
 import type { CommandInteraction } from 'discord.js';
-import { CommandOption } from '../types/types';
+import { CommandOption } from '../schema';
 
 type RawValue = string | number | boolean;
 

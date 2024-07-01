@@ -24,32 +24,15 @@ import { fetchGoogleCalendarEvents } from '../../database/calendar';
 
 const commandOptions = [
     {
-        name: 'span',
-        description: 'Number of weeks to show. [ default : 1 week]',
+        name: 'steps',
+        description: 'Number of send command to unsend. [ default : 1 ]',
         type: ApplicationCommandOptionType.Number,
         required: false,
-        choices: [
-            { name: '1 week', value: 1 },
-            { name: '2 weeks', value: 2 },
-            { name: '3 weeks', value: 3 },
-            { name: '4 weeks', value: 4 },
-        ],
         default: 1,
     },
     {
-        name: 'start',
-        description: 'Start date of the search. [ default : monday ]',
-        type: ApplicationCommandOptionType.String,
-        required: false,
-        choices: [
-            { name: 'monday', value: 'monday' },
-            { name: 'today', value: 'today' },
-        ],
-        default: 'monday',
-    },
-    {
-        name: 'force',
-        description: 'Send valid events while ignoring invalid subjects [default : false ]',
+        name: 'preview',
+        description: 'Preview the unsend command without executing it. [ default : false ]',
         type: ApplicationCommandOptionType.Number,
         required: false,
         choices: [
@@ -57,13 +40,6 @@ const commandOptions = [
             { name: 'no', value: 0 },
         ],
         default: 0,
-    },
-    {
-        name: 'subjects',
-        description: 'Subject(s) to query, example input: "cs21 cs33 cs132"',
-        type: ApplicationCommandOptionType.String,
-        required: false,
-        default: '',
     },
 ] as CommandOption[];
 
@@ -145,8 +121,8 @@ module.exports = {
     deleted: false,
     devOnly: true,
     allowedServerOnly: true,
-    name: 'send',
-    description: 'send list of requirements to their respective threads',
+    name: 'unsend',
+    description: 'unsend requirements from threads',
     options: commandOptions,
     callback: commandCallback,
 };

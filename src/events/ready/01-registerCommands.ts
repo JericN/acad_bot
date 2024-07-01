@@ -1,6 +1,6 @@
 import type { APIApplicationCommandOption, ApplicationCommand, Client } from 'discord.js';
 import { areCommandsDifferent, getClientCommands, getLocalCommands } from '../../utils/discord';
-import { type LocalCommand } from '../../utils/types/types';
+import { type LocalCommand } from '../../utils/schema';
 
 function handleExistingCommand(existingCommand: ApplicationCommand, localCommand: LocalCommand) {
     if (localCommand.deleted) {

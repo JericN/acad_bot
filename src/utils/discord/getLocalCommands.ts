@@ -1,4 +1,4 @@
-import { LocalCommand } from '../types/types';
+import { LocalCommand } from '../schema';
 import { getDirectoryContent } from './index';
 import path from 'path';
 

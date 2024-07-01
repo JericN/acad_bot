@@ -1,4 +1,4 @@
-import { AcadEvent, FilteredEvents } from '../types/types';
+import { AcadEvent, FilteredEvents } from '../schema';
 import fs from 'fs';
 import path from 'path';
 

@@ -1,4 +1,4 @@
-import { AcadEvent } from '../types/types';
+import { AcadEvent } from '../schema';
 
 export function applySubjectFilter(events: AcadEvent[], subjects: string[]): AcadEvent[] {
     if (!subjects.length) return events;

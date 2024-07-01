@@ -1,5 +1,5 @@
 import { toBlue, toRed, wrap } from '../discordColor';
-import { AcadEvent } from '../types/types';
+import { AcadEvent } from '../schema';
 import { listAcadEvents } from '../textFormat';
 
 export function generateInvalidEventScript(invalidEvents: AcadEvent[]): string {

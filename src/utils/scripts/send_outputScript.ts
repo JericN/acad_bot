@@ -1,5 +1,5 @@
 import { toBlue, toRed, wrap } from '../discordColor';
-import { DiscordEvent } from '../types/types';
+import { DiscordEvent } from '../schema';
 import { listDiscordEvents } from '../textFormat';
 
 export function generateSendOutputScript(sentEvents: DiscordEvent[], failedEvents: DiscordEvent[]) {

@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+const PossibleValues = z.union([z.string(), z.number(), z.boolean()]);
+
 export const LocalCommand = z.object({
     deleted: z.boolean(),
     devOnly: z.boolean(),
@@ -39,7 +41,16 @@ export type FilteredEvents = z.infer<typeof FilteredEvents>;
 export const GroupedEvents = z.record(z.array(AcadEvent));
 export type GroupedEvents = z.infer<typeof GroupedEvents>;
 
-const PossibleValues = z.union([z.string(), z.number(), z.boolean()]);
+export const EventLog = z.object({
+    timestamp: z.date(),
+    subject: z.string(),
+    summary: z.string(),
+    calendarId: z.string(),
+    messageId: z.string(),
+    threadId: z.string(),
+    guildId: z.string(),
+});
+export type EventLog = z.infer<typeof EventLog>;
 
 export const CommandOption = z.object({
     name: z.string(),
@@ -49,7 +60,6 @@ export const CommandOption = z.object({
     choices: z.array(z.object({ name: z.string(), value: PossibleValues })).optional(),
     default: PossibleValues,
 });
-
 export type CommandOption = z.infer<typeof CommandOption>;
 
 export const ListOptions = z.object({

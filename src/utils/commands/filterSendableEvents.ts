@@ -1,4 +1,4 @@
-import { AcadEvent } from '../types/types';
+import { AcadEvent } from '../schema';
 
 export function filterSendableEvents(events: AcadEvent[], missingThreads: string[], missingRoles: string[]) {
     const filteredEvents: AcadEvent[] = [];
